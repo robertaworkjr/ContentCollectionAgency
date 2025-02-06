@@ -15,25 +15,38 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#FFFFFF',
-    },
-    secondary: {
-      main: '#000000',
+      main: '#ffffff',
     },
     background: {
-      default: '#000000',
-      paper: 'rgba(255, 255, 255, 0.05)',
-    },
-    text: {
-      primary: '#FFFFFF',
-      secondary: 'rgba(255, 255, 255, 0.7)',
+      default: '#121212',
+      paper: '#1E1E1E',
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: "'Inter', sans-serif",
     h1: {
-      fontSize: '2.5rem',
+      fontWeight: 700,
+    },
+    h2: {
+      fontWeight: 700,
+    },
+    h3: {
       fontWeight: 600,
+    },
+    h4: {
+      fontWeight: 600,
+    },
+    h5: {
+      fontWeight: 500,
+    },
+    h6: {
+      fontWeight: 500,
+    },
+    body1: {
+      fontWeight: 400,
+    },
+    body2: {
+      fontWeight: 400,
     },
   },
   components: {
@@ -41,6 +54,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
+          fontWeight: 500,
         },
       },
     },
