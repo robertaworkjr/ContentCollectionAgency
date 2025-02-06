@@ -17,9 +17,6 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CookieIcon from '@mui/icons-material/Cookie';
-import SettingsIcon from '@mui/icons-material/Settings';
-import SecurityIcon from '@mui/icons-material/Security';
-import TrackChangesIcon from '@mui/icons-material/TrackChanges';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { motion } from 'framer-motion';
 
