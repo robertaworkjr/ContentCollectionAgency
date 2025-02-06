@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
@@ -31,7 +31,19 @@ const GradientText = styled(Typography)(({ theme }) => ({
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const [heroImage] = getRandomImages(1, 'artistic');
+  const [heroImage, setHeroImage] = useState(null);
+  const [imageError, setImageError] = useState(false);
+
+  useEffect(() => {
+    try {
+      const [image] = getRandomImages(1, 'artistic');
+      setHeroImage(image);
+      setImageError(false);
+    } catch (error) {
+      console.error('Error loading hero image:', error);
+      setImageError(true);
+    }
+  }, []);
 
   return (
     <>
@@ -41,7 +53,7 @@ const HomePage = () => {
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
-          '&::before': {
+          '&::before': heroImage && !imageError ? {
             content: '""',
             position: 'absolute',
             top: 0,
@@ -54,7 +66,7 @@ const HomePage = () => {
             opacity: 0.2,
             filter: 'blur(8px)',
             zIndex: 0,
-          },
+          } : {},
         }}
       >
         <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>

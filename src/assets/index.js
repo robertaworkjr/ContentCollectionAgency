@@ -18,7 +18,9 @@ import nikeVideo from './videos/NIkeVideo1.mp4';
 import propertyVideo from './videos/PropertyVideo1.mp4';
 import staticVideo from './videos/StaticVideo3D.mp4';
 
-// Categorized images
+// Categorized images with default fallbacks
+const defaultImage = glassAphrodite; // Use a reliable image as default
+
 export const images = {
   // Logos and branding
   logos: [logoEye1, logoEye2, logoIcon1, logoIcon2],
@@ -49,62 +51,66 @@ export const images = {
   ],
 };
 
-// Utility functions
-export const getRandomImage = (category = 'all') => {
-  const imageArray = images[category] || images.all;
-  return imageArray[Math.floor(Math.random() * imageArray.length)];
+// Helper function to safely get images
+export const getRandomImages = (count = 1, category = 'all') => {
+  try {
+    const imageArray = images[category] || images.all;
+    if (!imageArray || !Array.isArray(imageArray) || imageArray.length === 0) {
+      console.warn('No images found for category:', category);
+      return [defaultImage];
+    }
+
+    // Ensure count doesn't exceed available images
+    const safeCount = Math.min(count, imageArray.length);
+    
+    // Shuffle array and get first n items
+    const shuffled = [...imageArray]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, safeCount);
+    
+    return shuffled;
+  } catch (error) {
+    console.error('Error getting random images:', error);
+    return [defaultImage];
+  }
 };
 
-export const getRandomImages = (count = 1, category = 'all') => {
-  const imageArray = [...(images[category] || images.all)];
-  const result = [];
-  const totalAvailable = Math.min(count, imageArray.length);
-  
-  for (let i = 0; i < totalAvailable; i++) {
-    const randomIndex = Math.floor(Math.random() * imageArray.length);
-    result.push(imageArray.splice(randomIndex, 1)[0]);
-  }
-  
-  return result;
+// Export video content
+export const videos = {
+  instaFilter: instaFilterVideo,
+  nike: nikeVideo,
+  property: propertyVideo,
+  static3D: staticVideo,
 };
 
 // Portfolio data with videos
 export const portfolioItems = [
   {
     id: 1,
-    title: 'Instagram Filter Campaign',
-    description: 'Creative social media filters that engage and delight users.',
-    image: getRandomImage('social'),
-    video: instaFilterVideo,
-    category: 'Social Media',
+    title: "Instagram Filter Design",
+    description: "Custom AR filter development for social media engagement",
+    video: videos.instaFilter,
+    category: "Social Media",
   },
   {
     id: 2,
-    title: 'Nike Product Showcase',
-    description: 'Dynamic product visualization for the latest sportswear collection.',
-    image: getRandomImage('product'),
-    video: nikeVideo,
-    category: 'Product',
+    title: "Nike Product Campaign",
+    description: "Dynamic product showcase with motion graphics",
+    video: videos.nike,
+    category: "Product",
   },
   {
     id: 3,
-    title: 'Luxury Property Tour',
-    description: 'Virtual walkthrough of high-end real estate properties.',
-    image: getRandomImage('real-estate'),
-    video: propertyVideo,
-    category: 'Real Estate',
+    title: "Real Estate Visualization",
+    description: "Architectural visualization for luxury properties",
+    video: videos.property,
+    category: "Real Estate",
   },
   {
     id: 4,
-    title: '3D Animation Reel',
-    description: 'Showcase of our latest 3D animation and motion graphics work.',
-    image: getRandomImage('animation'),
-    video: staticVideo,
-    category: 'Animation',
+    title: "3D Motion Graphics",
+    description: "Abstract 3D animation for brand identity",
+    video: videos.static3D,
+    category: "Branding",
   },
 ];
-
-// Videos (placeholder for future use)
-export const videos = {
-  // Add video imports here when needed
-};
