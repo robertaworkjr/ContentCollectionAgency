@@ -1,31 +1,21 @@
-import React, { useState } from 'react';
-import {
-  Grid,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Button,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Chip,
-  Box,
-} from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Box, Grid, Card, CardContent, Typography, CardMedia } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
-import { getRandomImage } from '../assets';
+import { getRandomImages } from '../assets';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   height: '100%',
-  background: 'rgba(255, 255, 255, 0.03)',
+  display: 'flex',
+  flexDirection: 'column',
+  background: 'rgba(255, 255, 255, 0.05)',
   backdropFilter: 'blur(10px)',
   border: '1px solid rgba(255, 255, 255, 0.1)',
-  transition: 'transform 0.3s ease-in-out, border-color 0.3s ease-in-out',
+  transition: 'all 0.3s ease-in-out',
   '&:hover': {
     transform: 'translateY(-5px)',
-    border: '1px solid rgba(255, 255, 255, 0.3)',
+    background: 'rgba(255, 255, 255, 0.1)',
+    border: '1px solid rgba(255, 255, 255, 0.2)',
   },
 }));
 
@@ -40,7 +30,7 @@ const featuredContent = [
     id: 1,
     title: 'Virtual Reality Experience',
     description: 'Immersive VR solutions for training and entertainment',
-    image: getRandomImage('artistic'),
+    image: getRandomImages(1, 'artistic')[0],
     specs: ['4K Resolution', 'Interactive', '360° View'],
     details: 'Our virtual reality experiences transport users to new worlds with stunning visuals and interactive environments. Perfect for training simulations, virtual tours, and entertainment applications.',
   },
@@ -48,7 +38,7 @@ const featuredContent = [
     id: 2,
     title: 'Brand Identity Design',
     description: 'Creating unique and memorable brand identities',
-    image: getRandomImage('logos'),
+    image: getRandomImages(1, 'logos')[0],
     specs: ['Logo Design', 'Style Guide', 'Brand Strategy'],
     details: 'We craft comprehensive brand identities that tell your story and connect with your audience. From logo design to complete brand guidelines, we ensure consistency across all platforms.',
   },
@@ -56,7 +46,7 @@ const featuredContent = [
     id: 3,
     title: 'Content Production',
     description: 'Professional video and photo content creation',
-    image: getRandomImage('scenes'),
+    image: getRandomImages(1, 'scenes')[0],
     specs: ['4K/8K Video', 'Professional Audio', 'Color Grading'],
     details: 'Our content production team delivers high-quality video and photo content that captures your message perfectly. We handle everything from pre-production planning to final delivery.',
   },
@@ -64,7 +54,7 @@ const featuredContent = [
     id: 4,
     title: 'Design Innovation',
     description: 'Cutting-edge design solutions for modern challenges',
-    image: getRandomImage('process'),
+    image: getRandomImages(1, 'process')[0],
     specs: ['UI/UX Design', 'Prototyping', 'User Testing'],
     details: 'We push the boundaries of design to create innovative solutions that solve real problems. Our process combines creativity with user-centered methodologies for optimal results.',
   },
