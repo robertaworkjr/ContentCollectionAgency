@@ -1,7 +1,7 @@
 [build]
-  command = "npm run build"
+  base = "my-app"
+  command = "CI= npm run build"
   publish = "build"
-  base = "."
 
 [[redirects]]
   from = "/*"
