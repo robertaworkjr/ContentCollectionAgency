@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import FeaturedContent from '../components/FeaturedContent';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { getRandomImage } from '../assets';
+import { getRandomImages } from '../assets';
 
 const HeroButton = styled(Button)(({ theme }) => ({
   background: 'rgba(255, 255, 255, 0.1)',
@@ -31,7 +31,7 @@ const GradientText = styled(Typography)(({ theme }) => ({
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const heroImage = getRandomImage('artistic');
+  const [heroImage] = getRandomImages(1, 'artistic');
 
   return (
     <>
