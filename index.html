@@ -161,7 +161,10 @@
         const imageSources = [
             'assets/images/img3.png',
             'assets/images/img7.jpg',
-            'assets/images/img9.jpg'
+            'assets/images/img9.jpg',
+            'assets/images/img13.png',
+            'assets/images/img14.png',
+            'assets/images/img15.png'
         ];
 
         let activeAnimations = 0;
@@ -179,10 +182,13 @@
             const images = document.querySelectorAll('.animate-random');
             const shuffledSources = shuffleArray([...imageSources]);
             
+            // Take only the first 3 images from the shuffled array
+            const selectedSources = shuffledSources.slice(0, 3);
+            
             images.forEach((img, index) => {
                 // Only swap if the image is currently not animating
                 if (!img.style.animation) {
-                    img.src = shuffledSources[index];
+                    img.src = selectedSources[index];
                 }
             });
 
