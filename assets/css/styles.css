@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional styles can be added here */
+/* Custom styles */
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+@layer components {
+    .btn {
+        @apply bg-white text-black px-6 py-2 rounded-full transition hover:bg-gray-200;
+    }
+
+    .input {
+        @apply w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white;
+    }
+
+    .nav-link {
+        @apply hover:text-gray-300 transition;
+    }
+
+    .card {
+        @apply bg-black p-8 rounded-[15px] transform hover:scale-105 transition duration-300;
+    }
+
+    .container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+}
+
+/* Affiliate banner styles */
+.affiliate-banner {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4;
+}
+
+.affiliate-banner .container {
+    @apply flex items-center justify-between text-sm;
+}
+
+.affiliate-logos {
+    @apply flex items-center gap-8 py-8;
+}
+
+.affiliate-logos img {
+    @apply h-12 w-auto opacity-75 hover:opacity-100 transition-opacity grayscale hover:grayscale-0;
+}
+
+/* VR Demo iframe styles */
+.vr-demo-frame {
+    width: 960px;
+    height: 600px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

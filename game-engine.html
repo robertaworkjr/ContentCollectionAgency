@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Engine Solutions - ContentAgent</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .vr-demo-frame {
+            width: 960px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Top Affiliate Banner -->
+    <div class="affiliate-banner">
+        <div class="container mx-auto">
+            <span>Trusted by industry leaders</span>
+            <div class="flex items-center gap-4">
+                <a href="#" class="hover:text-gray-200">Unity Partner</a>
+                <span>|</span>
+                <a href="#" class="hover:text-gray-200">Unreal Marketplace Creator</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-black/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+                    <span class="text-blue-500">CCA</span>
+                    <span class="text-sm text-gray-400">|</span>
+                    <span>ContentAgent</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="game-engine.html" class="hover:text-gray-300 transition">Game Engine</a>
+                    <a href="digital-media.html" class="hover:text-gray-300 transition">Digital Media</a>
+                    <a href="create.html" class="hover:text-gray-300 transition">Create</a>
+                    <a href="index.html#contact" class="hover:text-gray-300 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="request-form.html" class="hidden md:block bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-full transition">Get Started</a>
+                    <button id="openMenu" class="md:hidden text-2xl" type="button" aria-label="Open menu" title="Open navigation menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Engine Section -->
+    <section class="pt-32 pb-20 bg-zinc-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Game Engine Solutions</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black p-8 rounded-[15px] transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl mb-6 text-blue-500">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Unity Development</h3>
+                    <p class="text-gray-400 mb-4">Custom game development using Unity engine. Create immersive 2D and 3D experiences with cutting-edge graphics and physics.</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>• Cross-platform deployment</li>
+                        <li>• Custom shader development</li>
+                        <li>• Performance optimization</li>
+                    </ul>
+                </div>
+
+                <div class="bg-black p-8 rounded-[15px] transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl mb-6 text-green-500">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">VR/AR Integration</h3>
+                    <p class="text-gray-400 mb-4">Virtual and augmented reality solutions for gaming and interactive experiences. Support for major VR/AR platforms.</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>• Oculus/Meta integration</li>
+                        <li>• AR marker tracking</li>
+                        <li>• Spatial computing</li>
+                    </ul>
+                </div>
+
+                <div class="bg-black p-8 rounded-[15px] transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl mb-6 text-purple-500">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Custom Game Systems</h3>
+                    <p class="text-gray-400 mb-4">Bespoke game mechanics and systems development. From inventory systems to complex AI behaviors.</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>• AI pathfinding</li>
+                        <li>• Inventory management</li>
+                        <li>• Save systems</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- VR Demo Section -->
+            <div class="mt-16 flex justify-center">
+                <iframe 
+                    src="https://i.simmer.io/@Rawork/longitude-vr-test002" 
+                    class="vr-demo-frame rounded-lg shadow-lg" 
+                    title="VR Demo Experience"
+                    aria-label="Interactive VR demonstration environment">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>

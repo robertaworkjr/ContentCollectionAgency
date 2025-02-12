@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Creation Agent - Media & AR Solutions</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .delay-1 {
+            animation-delay: 1s;
+        }
+        .delay-2 {
+            animation-delay: 2s;
+        }
+        .delay-3 {
+            animation-delay: 3s;
+        }
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            20% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        .animate-random {
+            opacity: 1; /* Start visible by default */
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black/95 z-50 transform transition-transform duration-300 translate-x-full">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex justify-end mb-8">
+                <button id="closeMenu" class="text-3xl text-gray-400 hover:text-white" type="button" aria-label="Close Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 text-center text-xl">
+                <a href="game-engine.html" class="hover:text-gray-300 transition py-2">Game Engine</a>
+                <a href="digital-media.html" class="hover:text-gray-300 transition py-2">Digital Media</a>
+                <a href="3d-model.html" class="hover:text-gray-300 transition py-2">3D Model</a>
+                <a href="index.html#contact" class="hover:text-gray-300 transition py-2">Contact</a>
+                <a href="request-form.html" class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full transition mt-4">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-black/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+                    <span class="text-blue-500">CCA</span>
+                    <span class="text-sm text-gray-400">|</span>
+                    <span>ContentAgent</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="game-engine.html" class="hover:text-gray-300 transition">Game Engine</a>
+                    <a href="digital-media.html" class="hover:text-gray-300 transition">Digital Media</a>
+                    <a href="3d-model.html" class="hover:text-gray-300 transition">3D Model</a>
+                    <a href="index.html#contact" class="hover:text-gray-300 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="request-form.html" class="hidden md:block btn">Get Started</a>
+                    <button id="openMenu" class="md:hidden text-2xl" type="button" aria-label="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Image placeholders on the left -->
+                <div class="flex gap-4 md:w-1/2" id="imageContainer">
+                    <div class="w-[200px] h-[400px] bg-zinc-800 rounded-lg overflow-hidden">
+                        <img src="assets/images/img13.png" alt="Content Creation" class="w-full h-full object-cover animate-random">
+                    </div>
+                    <div class="w-[200px] h-[400px] bg-zinc-800 rounded-lg overflow-hidden">
+                        <img src="assets/images/img14.png" alt="Content Creation" class="w-full h-full object-cover animate-random">
+                    </div>
+                    <div class="w-[200px] h-[400px] bg-zinc-800 rounded-lg overflow-hidden">
+                        <img src="assets/images/img15.png" alt="Content Creation" class="w-full h-full object-cover animate-random">
+                    </div>
+                </div>
+                <!-- Text content on the right -->
+                <div class="md:w-1/2 text-left">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-8">
+                        We Create Content That Tells Your Story
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-12">
+                        Transform your ideas into stunning visual experiences. We specialize in crafting professional content that tells your story and engages your audience.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="request-form.html" class="btn text-center">
+                            Get Started
+                        </a>
+                        <a href="index.html#contact" class="btn-outline text-center">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-zinc-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-8">Get in Touch</h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Ready to start your next project? We'd love to hear from you. Fill out our request form and we'll get back to you as soon as possible.</p>
+            <div class="text-center">
+                <a href="request-form.html" class="inline-block bg-white text-black hover:bg-gray-200 px-12 py-4 rounded-full text-lg font-medium transition">
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-zinc-800">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 ContentAgent. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/mobile-menu.js"></script>
+    <script>
+        const imageSources = [
+            'assets/images/img13.png',
+            'assets/images/img14.png',
+            'assets/images/img15.png'
+        ];
+
+        let activeAnimations = 0;
+        const totalImages = 3;
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function swapImages() {
+            const images = document.querySelectorAll('.animate-random');
+            const shuffledSources = shuffleArray([...imageSources]);
+            
+            images.forEach((img, index) => {
+                // Only swap if the image is currently not animating
+                if (!img.style.animation) {
+                    img.src = shuffledSources[index];
+                }
+            });
+
+            // Schedule next swap (5-10 seconds)
+            setTimeout(swapImages, Math.random() * 5000 + 5000);
+        }
+
+        function canStartAnimation() {
+            return activeAnimations < totalImages - 1; // Keep at least one image visible
+        }
+
+        function animateRandomly(element) {
+            if (!canStartAnimation()) {
+                // If we can't start a new animation, wait and try again
+                setTimeout(() => animateRandomly(element), 1000);
+                return;
+            }
+
+            activeAnimations++;
+            const duration = Math.random() * 3000 + 4000; // Random duration between 4-7 seconds
+            element.style.animation = `fadeInOut ${duration}ms ease-in-out`;
+            
+            element.addEventListener('animationend', function onAnimationEnd() {
+                element.style.animation = '';
+                activeAnimations--;
+                element.removeEventListener('animationend', onAnimationEnd);
+
+                // Random delay before next animation (2-5 seconds)
+                setTimeout(() => {
+                    // Possibly swap the image source before starting new animation
+                    const shuffledSources = shuffleArray([...imageSources]);
+                    element.src = shuffledSources[0];
+                    animateRandomly(element);
+                }, Math.random() * 3000 + 2000);
+            });
+        }
+
+        // Start random animations and swapping for each image
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.animate-random');
+            
+            // Ensure images are visible initially
+            images.forEach(img => img.style.opacity = '1');
+            
+            // Stagger the start of animations
+            images.forEach((img, index) => {
+                setTimeout(() => {
+                    animateRandomly(img);
+                }, (index + 1) * 2000); // Start each image 2 seconds after the previous
+            });
+
+            // Start the image swapping process after 3 seconds
+            setTimeout(swapImages, 3000);
+        });
+    </script>
+</body>
+</html>

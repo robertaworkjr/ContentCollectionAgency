@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Creation - ContentAgent</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-black/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+                    <span class="text-blue-500">CCA</span>
+                    <span class="text-sm text-gray-400">|</span>
+                    <span>ContentAgent</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="game-engine.html" class="hover:text-gray-300 transition">Game Engine</a>
+                    <a href="digital-media.html" class="hover:text-gray-300 transition">Digital Media</a>
+                    <a href="3d-model.html" class="hover:text-gray-300 transition">3D Model</a>
+                    <a href="index.html#contact" class="hover:text-gray-300 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="request-form.html" class="hidden md:block bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-full transition">Get Started</a>
+                    <button id="openMenu" class="md:hidden text-2xl" type="button" title="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black/95 z-50 transform transition-transform duration-300 translate-x-full">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex justify-end mb-8">
+                <button id="closeMenu" class="text-3xl text-gray-400 hover:text-white" type="button" title="Close Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 text-center text-xl">
+                <a href="game-engine.html" class="hover:text-gray-300 transition py-2">Game Engine</a>
+                <a href="digital-media.html" class="hover:text-gray-300 transition py-2">Digital Media</a>
+                <a href="3d-model.html" class="hover:text-gray-300 transition py-2">3D Model</a>
+                <a href="index.html#contact" class="hover:text-gray-300 transition py-2">Contact</a>
+                <a href="request-form.html" class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full transition mt-4">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-8">
+                AI-Powered <span class="text-gray-300">Content Creation</span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Transform your ideas into compelling content with our advanced AI technology
+            </p>
+            <div class="text-center">
+                <a href="request-form.html" class="inline-block bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-full text-lg font-semibold transition">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="text-gray-300 text-4xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Smart Content Generation</h3>
+                    <p class="text-gray-400">Our AI analyzes your requirements and generates tailored content that matches your brand voice.</p>
+                </div>
+                <div class="bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="text-gray-300 text-4xl mb-4">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Multi-Language Support</h3>
+                    <p class="text-gray-400">Create content in multiple languages while maintaining context and cultural relevance.</p>
+                </div>
+                <div class="bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="text-gray-300 text-4xl mb-4">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Style Adaptation</h3>
+                    <p class="text-gray-400">Automatically adjust content tone and style to match your target audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">How It Works</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Input Requirements</h3>
+                    <p class="text-gray-400">Define your content needs and target audience</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">AI Analysis</h3>
+                    <p class="text-gray-400">Our AI processes and analyzes your requirements</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Content Generation</h3>
+                    <p class="text-gray-400">AI creates tailored content matching your needs</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Review & Refine</h3>
+                    <p class="text-gray-400">Fine-tune the generated content as needed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Content Examples</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gray-900/50 p-8 rounded-2xl">
+                    <img src="assets/images/placeholder.svg" alt="Marketing Copy Example" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold mb-4">Marketing Copy</h3>
+                    <p class="text-gray-400">Engaging marketing content that drives conversions and maintains brand consistency.</p>
+                </div>
+                <div class="bg-gray-900/50 p-8 rounded-2xl">
+                    <img src="assets/images/placeholder.svg" alt="Social Media Content Example" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold mb-4">Social Media</h3>
+                    <p class="text-gray-400">Platform-optimized social media content that engages your audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Ready to Transform Your Content?</h2>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Start creating engaging, AI-powered content that resonates with your audience
+            </p>
+            <a href="request-form.html" class="inline-block bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-full text-lg transition">
+                Start Creating Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 ContentAgent. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>

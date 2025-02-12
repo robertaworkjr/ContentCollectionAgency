@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Videos - ContentAgent</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .aspect-w-9 {
+            position: relative;
+            padding-bottom: 177.78%; /* 9:16 aspect ratio */
+        }
+        .aspect-w-9 > * {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-black/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+                    <span class="text-blue-500">CCA</span>
+                    <span class="text-sm text-gray-400">|</span>
+                    <span>ContentAgent</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="game-engine.html" class="hover:text-gray-300 transition">Game Engine</a>
+                    <a href="digital-media.html" class="hover:text-gray-300 transition">Digital Media</a>
+                    <a href="index.html#contact" class="hover:text-gray-300 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="request-form.html" class="hidden md:block bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-full transition">Get Started</a>
+                    <button id="openMenu" class="md:hidden text-2xl" type="button" aria-label="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black/95 z-50 transform transition-transform duration-300 translate-x-full">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex justify-end mb-8">
+                <button id="closeMenu" class="text-3xl text-gray-400 hover:text-white" type="button" aria-label="Close Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 text-center text-xl">
+                <a href="game-engine.html" class="hover:text-gray-300 transition py-2">Game Engine</a>
+                <a href="digital-media.html" class="hover:text-gray-300 transition py-2">Digital Media</a>
+                <a href="index.html#contact" class="hover:text-gray-300 transition py-2">Contact</a>
+                <a href="request-form.html" class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full transition mt-4">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-center mb-12">Demo Videos</h1>
+
+            <!-- Main Video Player -->
+            <div class="max-w-[540px] mx-auto mb-12">
+                <div class="bg-zinc-900 rounded-xl overflow-hidden">
+                    <div class="aspect-w-9">
+                        <video id="mainPlayer" class="w-full h-full object-cover" controls>
+                            <source src="assets/videos/NikeVideo1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="mt-4 px-4">
+                    <h2 id="currentTitle" class="text-2xl font-bold mb-2">Nike Brand Campaign</h2>
+                    <p id="currentDescription" class="text-gray-400">Dynamic brand video showcasing Nike's latest collection with AI-enhanced visuals.</p>
+                </div>
+            </div>
+
+            <!-- Video Playlist -->
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+                <!-- Video Items -->
+                <div class="video-item cursor-pointer bg-zinc-900 rounded-xl overflow-hidden hover:bg-zinc-800 transition p-2" 
+                     data-video="assets/videos/NikeVideo1.mp4" 
+                     data-title="Nike Brand Campaign"
+                     data-description="Dynamic brand video showcasing Nike's latest collection with AI-enhanced visuals.">
+                    <div class="aspect-w-9">
+                        <video class="w-full h-full object-cover" muted loop>
+                            <source src="assets/videos/NikeVideo1.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition">
+                            <i class="fas fa-play text-white text-4xl opacity-80"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item cursor-pointer bg-zinc-900 rounded-xl overflow-hidden hover:bg-zinc-800 transition p-2"
+                     data-video="assets/videos/InstaFilter1.mp4"
+                     data-title="Instagram AR Filter"
+                     data-description="Interactive AR filter designed for Instagram, featuring real-time face tracking and effects.">
+                    <div class="aspect-w-9">
+                        <video class="w-full h-full object-cover" muted loop>
+                            <source src="assets/videos/InstaFilter1.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition">
+                            <i class="fas fa-play text-white text-4xl opacity-80"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item cursor-pointer bg-zinc-900 rounded-xl overflow-hidden hover:bg-zinc-800 transition p-2"
+                     data-video="assets/videos/PropertyVideo1.mp4"
+                     data-title="Real Estate Showcase"
+                     data-description="Virtual property tour with interactive 3D elements and AI-powered property insights.">
+                    <div class="aspect-w-9">
+                        <video class="w-full h-full object-cover" muted loop>
+                            <source src="assets/videos/PropertyVideo1.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition">
+                            <i class="fas fa-play text-white text-4xl opacity-80"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-zinc-800">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 ContentAgent. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainPlayer = document.getElementById('mainPlayer');
+            const currentTitle = document.getElementById('currentTitle');
+            const currentDescription = document.getElementById('currentDescription');
+            const videoItems = document.querySelectorAll('.video-item');
+            const openMenu = document.getElementById('openMenu');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeMenu = document.getElementById('closeMenu');
+
+            // Handle preview videos
+            videoItems.forEach(item => {
+                const previewVideo = item.querySelector('video');
+
+                // Play preview on hover
+                item.addEventListener('mouseenter', () => {
+                    previewVideo.play();
+                });
+
+                // Pause preview on mouse leave
+                item.addEventListener('mouseleave', () => {
+                    previewVideo.pause();
+                    previewVideo.currentTime = 0;
+                });
+
+                // Handle click to play in main player
+                item.addEventListener('click', function() {
+                    mainPlayer.src = this.dataset.video;
+                    mainPlayer.load();
+                    mainPlayer.play();
+                    currentTitle.textContent = this.dataset.title;
+                    currentDescription.textContent = this.dataset.description;
+
+                    // Scroll to video player on mobile
+                    if (window.innerWidth < 768) {
+                        mainPlayer.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Handle mobile menu
+            openMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+    </script>
+</body>
+</html>

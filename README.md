@@ -1,73 +1,46 @@
 # Content Collection Agency
 
-A modern React-based web application for managing and showcasing digital content. Built with Material-UI and Framer Motion for beautiful, responsive user interfaces.
+A modern web platform for game engine solutions, digital media production, and 3D modeling services. Built with HTML, TailwindCSS, and JavaScript.
 
 ## Features
 
-- Modern, responsive design using Material-UI
-- Smooth animations with Framer Motion
-- Component-based architecture
-- Privacy-focused with Cookie Consent
-- Portfolio showcase
-- Contact form integration
+- Game Engine Solutions & VR Integration
+- Digital Media Production
+- 3D Modeling Services
+- Interactive VR Demo
+- Responsive Design
+- Modern UI/UX
 
 ## Tech Stack
 
-- React 18
-- Material-UI
-- Framer Motion
-- React Router DOM
-- Netlify deployment
+- HTML5
+- TailwindCSS
+- JavaScript
+- Font Awesome Icons
 
-## Getting Started
+## Local Development
 
 1. Clone the repository:
-   ```bash
-   git clone [your-repo-url]
-   cd ContentCollectionAgency
-   ```
+```bash
+git clone https://github.com/yourusername/ContentCollectionAgency.git
+```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. Start the development server:
-   ```bash
-   npm start
-   ```
+3. Run TailwindCSS build:
+```bash
+npm run build:css
+```
 
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+4. Open `index.html` in your browser
 
 ## Deployment
 
-This project is configured for deployment on Netlify. The `netlify.toml` file contains the necessary build configurations.
-
-To deploy:
-1. Push your changes to GitHub
-2. Connect your GitHub repository to Netlify
-3. Configure build settings:
-   - Build command: `npm run build`
-   - Publish directory: `build`
-
-## Available Scripts
-
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
-- `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+This site is configured for deployment on Netlify with continuous deployment from GitHub.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License - See LICENSE file for details

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Modeling Services - ContentAgent</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-black/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
+                    <span class="text-blue-500">CCA</span>
+                    <span class="text-sm text-gray-400">|</span>
+                    <span>ContentAgent</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="game-engine.html" class="hover:text-gray-300 transition">Game Engine</a>
+                    <a href="digital-media.html" class="hover:text-gray-300 transition">Digital Media</a>
+                    <a href="3d-model.html" class="hover:text-gray-300 transition">3D Model</a>
+                    <a href="index.html#contact" class="hover:text-gray-300 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="request-form.html" class="hidden md:block bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-full transition">Get Started</a>
+                    <button id="openMenu" class="md:hidden text-2xl" type="button" aria-label="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black/95 z-50 transform transition-transform duration-300 translate-x-full">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex justify-end mb-8">
+                <button id="closeMenu" class="text-3xl text-gray-400 hover:text-white" type="button" aria-label="Close Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 text-center text-xl">
+                <a href="index.html" class="hover:text-gray-300 transition py-2">Home</a>
+                <a href="game-engine.html" class="hover:text-gray-300 transition py-2">Game Engine</a>
+                <a href="digital-media.html" class="hover:text-gray-300 transition py-2">Digital Media</a>
+                <a href="3d-model.html" class="hover:text-gray-300 transition py-2">3D Model</a>
+                <a href="index.html#contact" class="hover:text-gray-300 transition py-2">Contact</a>
+                <a href="request-form.html" class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-full transition mt-4">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Modeling Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">3D Modeling Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black p-8 rounded-[15px] transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl mb-6 text-cyan-500">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Character Modeling</h3>
+                    <p class="text-gray-400 mb-4">Professional 3D character creation for games, animations, and virtual experiences.</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>• High-poly sculpting</li>
+                        <li>• Rigging & animation</li>
+                        <li>• Custom texturing</li>
+                    </ul>
+                </div>
+
+                <div class="bg-black p-8 rounded-[15px] transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl mb-6 text-orange-500">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Architectural Visualization</h3>
+                    <p class="text-gray-400 mb-4">Stunning architectural renders and walkthroughs for real estate and design projects.</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>• Interior visualization</li>
+                        <li>• Exterior rendering</li>
+                        <li>• Virtual tours</li>
+                    </ul>
+                </div>
+
+                <div class="bg-black p-8 rounded-[15px] transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl mb-6 text-purple-500">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Product Modeling</h3>
+                    <p class="text-gray-400 mb-4">Detailed 3D product models for e-commerce, marketing, and manufacturing.</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>• CAD modeling</li>
+                        <li>• Product visualization</li>
+                        <li>• Technical illustrations</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 3D Model Viewer Section -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center mb-8">Interactive 3D Models</h3>
+                <div class="bg-black p-6 rounded-lg mb-8 max-w-2xl mx-auto">
+                    <h4 class="text-xl font-semibold mb-4">Viewer Controls:</h4>
+                    <ul class="text-gray-400 space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-mouse mr-3"></i>
+                            <span>Left click and drag to <strong>rotate</strong> the model</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-arrows-alt mr-3"></i>
+                            <span>Right click and drag to <strong>pan</strong></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-search-plus mr-3"></i>
+                            <span>Scroll to <strong>zoom</strong> in/out</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-center flex-col items-center">
+                    <div class="sketchfab-embed-wrapper w-full max-w-4xl"> 
+                        <iframe title="Post box UK" 
+                            frameborder="0" 
+                            allowfullscreen 
+                            mozallowfullscreen="true" 
+                            webkitallowfullscreen="true" 
+                            allow="autoplay; fullscreen; xr-spatial-tracking" 
+                            xr-spatial-tracking 
+                            execution-while-out-of-viewport 
+                            execution-while-not-rendered 
+                            web-share 
+                            src="https://sketchfab.com/models/089ef57f8f844e69959ff4c88acfbb5e/embed"
+                            class="w-full aspect-[4/3] rounded-lg shadow-lg">
+                        </iframe> 
+                        <p class="text-gray-400 text-sm mt-4 text-center"> 
+                            <a href="https://sketchfab.com/3d-models/post-box-uk-089ef57f8f844e69959ff4c88acfbb5e?utm_medium=embed&utm_campaign=share-popup&utm_content=089ef57f8f844e69959ff4c88acfbb5e" 
+                               target="_blank" 
+                               rel="nofollow noopener"
+                               class="font-bold text-blue-500 hover:text-blue-400">
+                                Post box UK
+                            </a> by 
+                            <a href="https://sketchfab.com/robertaworkjr?utm_medium=embed&utm_campaign=share-popup&utm_content=089ef57f8f844e69959ff4c88acfbb5e" 
+                               target="_blank" 
+                               rel="nofollow noopener"
+                               class="font-bold text-blue-500 hover:text-blue-400">
+                                robertaworkjr
+                            </a> on 
+                            <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=089ef57f8f844e69959ff4c88acfbb5e" 
+                               target="_blank" 
+                               rel="nofollow noopener"
+                               class="font-bold text-blue-500 hover:text-blue-400">
+                                Sketchfab
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center mb-8">Featured Work</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio items - Replace src with actual images -->
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="assets/images/3d-model-1.jpg" alt="3D Model Portfolio 1" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-xl font-bold mb-2">Character Design</h4>
+                                <p class="text-gray-300">High-detail character model for gaming</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="assets/images/3d-model-2.jpg" alt="3D Model Portfolio 2" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-xl font-bold mb-2">Architectural Visualization</h4>
+                                <p class="text-gray-300">Modern interior visualization</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="assets/images/3d-model-3.jpg" alt="3D Model Portfolio 3" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <h4 class="text-xl font-bold mb-2">Product Visualization</h4>
+                                <p class="text-gray-300">Detailed product rendering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>
