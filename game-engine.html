@@ -96,13 +96,73 @@
                 </div>
             </div>
             <!-- VR Demo Section -->
-            <div class="mt-16 flex justify-center">
-                <iframe 
-                    src="https://i.simmer.io/@Rawork/longitude-vr-test002" 
-                    class="vr-demo-frame rounded-lg shadow-lg" 
-                    title="VR Demo Experience"
-                    aria-label="Interactive VR demonstration environment">
-                </iframe>
+            <div class="mt-16 space-y-8">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold mb-4">Interactive VR Demo</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Experience our VR capabilities firsthand with this interactive demo. Use your keyboard and mouse, or connect a VR headset for full immersion.</p>
+                </div>
+                
+                <!-- Instructions Tabs -->
+                <div class="max-w-4xl mx-auto bg-black/40 rounded-lg p-6">
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-black/60 p-4 rounded-lg border border-blue-500/20">
+                            <div class="text-blue-400 text-2xl mb-3">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Basic Controls</h4>
+                            <ul class="text-gray-400 space-y-2 text-sm">
+                                <li><span class="text-white">W A S D</span> - Move around</li>
+                                <li><span class="text-white">Mouse</span> - Look around</li>
+                                <li><span class="text-white">Space</span> - Jump</li>
+                                <li><span class="text-white">Shift</span> - Sprint</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-black/60 p-4 rounded-lg border border-green-500/20">
+                            <div class="text-green-400 text-2xl mb-3">
+                                <i class="fas fa-vr-cardboard"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">VR Controls</h4>
+                            <ul class="text-gray-400 space-y-2 text-sm">
+                                <li><span class="text-white">Trigger</span> - Interact</li>
+                                <li><span class="text-white">Grip</span> - Grab objects</li>
+                                <li><span class="text-white">Thumbstick</span> - Movement</li>
+                                <li><span class="text-white">Menu Button</span> - Pause</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-black/60 p-4 rounded-lg border border-purple-500/20">
+                            <div class="text-purple-400 text-2xl mb-3">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Setup Guide</h4>
+                            <ul class="text-gray-400 space-y-2 text-sm">
+                                <li>1. Connect VR headset</li>
+                                <li>2. Clear 2m x 2m space</li>
+                                <li>3. Click "VR Mode" in menu</li>
+                                <li>4. Put on headset & enjoy!</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Performance Tips -->
+                    <div class="text-sm text-gray-500 bg-black/40 p-3 rounded-lg">
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-lightbulb text-yellow-500"></i>
+                            <span>For best performance: Use Chrome or Firefox, enable hardware acceleration, and ensure your VR headset firmware is up to date.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Demo Frame -->
+                <div class="flex justify-center">
+                    <iframe 
+                        src="https://i.simmer.io/@Rawork/longitude-vr-test002" 
+                        class="vr-demo-frame rounded-lg shadow-lg" 
+                        title="VR Demo Experience"
+                        aria-label="Interactive VR demonstration environment">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
