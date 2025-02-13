@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://www.paypal.com/sdk/js?client-id=BAA1RE_QfaxzfH-EYCArQlQq_dsAtD3o-kMFUZH6jt7_HAUHG2hFpiNiXs0C-eJyGip5lvSrFyS1A_9Inw&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAA1RE_QfaxzfH-EYCArQlQq_dsAtD3o-kMFUZH6jt7_HAUHG2hFpiNiXs0C-eJyGip5lvSrFyS1A_9Inw&components=buttons&currency=GBP"></script>
+    <style>
+        /* Fix PayPal button text colors */
+        .paypal-button-container select,
+        .paypal-button-container option,
+        .paypal-dropdown,
+        .paypal-button-container input,
+        .paypal-button-container textarea,
+        [data-paypal-smart-button] select,
+        [data-paypal-smart-button] input,
+        [data-paypal-smart-button] textarea,
+        .paypal-buttons iframe,
+        .paypal-buttons input,
+        .paypal-buttons select,
+        .paypal-buttons textarea {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+        }
+    </style>
 </head>
 <body class="bg-black text-white">
     <!-- Mobile Menu -->
@@ -79,7 +97,32 @@
                                 <span>One month duration</span>
                             </li>
                         </ul>
-                        <div id="paypal-container-M4X4MGF8VHQBW" class="mt-6"></div>
+                        <div class="space-y-4">
+                            <div class="relative">
+                                <label class="block text-sm font-medium mb-2">Quantity</label>
+                                <select data-quantity class="w-full px-4 py-3 rounded-lg bg-white border border-zinc-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-black appearance-none">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pt-6 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Ensure you have explained expressed intentions media / content</label>
+                                <textarea data-description class="w-full px-4 py-3 rounded-lg bg-white border border-zinc-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-black" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://www.paypal.com/ncp/payment/4J4B7SVK6Y4GW" class="block w-full">
+                                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" class="w-full max-w-[300px] mx-auto">
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Tier 2: Custom -->
@@ -121,94 +164,6 @@
         </div>
     </section>
 
-    <!-- Request Form Section -->
-    <section class="pt-32 pb-20">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto">
-                <h1 class="text-4xl font-bold text-center mb-8">Start Your Project</h1>
-                <p class="text-gray-400 text-center mb-12">Tell us about your content creation needs and we'll help bring your vision to life.</p>
-                
-                <form id="requestForm" class="space-y-8">
-                    <!-- Project Details -->
-                    <div class="space-y-6">
-                        <h2 class="text-2xl font-bold">Project Details</h2>
-                        
-                        <div>
-                            <label class="block text-sm font-medium mb-2" for="projectTitle">Project Title*</label>
-                            <input type="text" id="projectTitle" name="projectTitle" required
-                                class="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium mb-2" for="projectType">Project Type*</label>
-                            <select id="projectType" name="projectType" required
-                                class="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white">
-                                <option value="">Select a project type</option>
-                                <option value="video">Video Production</option>
-                                <option value="ar">AR Experience</option>
-                                <option value="3d">3D Animation</option>
-                                <option value="social">Social Media Content</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium mb-2" for="projectDescription">Project Description*</label>
-                            <textarea id="projectDescription" name="projectDescription" rows="4" required
-                                class="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white"
-                                placeholder="Describe your project and its goals..."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Contact Information -->
-                    <div class="space-y-6">
-                        <h2 class="text-2xl font-bold">Contact Information</h2>
-                        
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium mb-2" for="name">Full Name*</label>
-                                <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white">
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium mb-2" for="email">Email Address*</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium mb-2" for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone"
-                                class="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium mb-2" for="company">Company/Organization</label>
-                            <input type="text" id="company" name="company"
-                                class="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-700 focus:border-white focus:ring-1 focus:ring-white outline-none transition text-white">
-                        </div>
-                    </div>
-
-                    <div class="pt-6">
-                        <button type="submit"
-                            class="w-full bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-lg text-lg font-medium transition">
-                            Submit Request
-                        </button>
-                    </div>
-                </form>
-
-                <!-- Success Message (hidden by default) -->
-                <div id="successMessage" class="hidden mt-8 p-6 bg-green-600/20 border border-green-500 rounded-lg text-center">
-                    <i class="fas fa-check-circle text-4xl text-green-500 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Request Submitted Successfully!</h3>
-                    <p class="text-gray-400">Thank you for your interest. We'll review your project details and get back to you within 24-48 hours.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="py-8 border-t border-zinc-800">
         <div class="container mx-auto px-6 text-center text-gray-400">
@@ -216,75 +171,20 @@
         </div>
     </footer>
 
-    <script>
-        paypal.HostedButtons({
-            hostedButtonId: "M4X4MGF8VHQBW",
-        }).render("#paypal-container-M4X4MGF8VHQBW");
-    </script>
     <script src="assets/js/mobile-menu.js"></script>
     <script>
+        // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenu = document.getElementById('mobileMenu');
             const openMenuBtn = document.getElementById('openMenu');
             const closeMenuBtn = document.getElementById('closeMenu');
-
-            // Mobile menu functionality
+            
             openMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.remove('translate-x-full');
             });
-
+            
             closeMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.add('translate-x-full');
-            });
-
-            // Form handling
-            const form = document.getElementById('requestForm');
-            const successMessage = document.getElementById('successMessage');
-            
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(form);
-                const data = Object.fromEntries(formData.entries());
-                
-                // Basic validation
-                const requiredFields = ['projectTitle', 'projectType', 'projectDescription', 'name', 'email'];
-                const missingFields = requiredFields.filter(field => !data[field]);
-                
-                if (missingFields.length > 0) {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-                
-                // Email validation
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(data.email)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-                
-                try {
-                    // Show loading state
-                    const submitButton = form.querySelector('button[type="submit"]');
-                    const originalText = submitButton.textContent;
-                    submitButton.disabled = true;
-                    submitButton.textContent = 'Submitting...';
-                    
-                    // Simulate API call
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                    
-                    // Show success message
-                    form.classList.add('hidden');
-                    successMessage.classList.remove('hidden');
-                    
-                    // Reset form
-                    form.reset();
-                    
-                } catch (error) {
-                    alert('There was an error submitting your request. Please try again.');
-                    console.error('Form submission error:', error);
-                }
             });
         });
     </script>
